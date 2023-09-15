@@ -6,14 +6,17 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 const footerData = [
   {
+    id: 1,
     title: "Company",
     data: ["About us", "Our service", "privicy policy", "Affilated Programe"],
   },
   {
+    id: 2,
     title: "get Help",
     data: ["About us", "Our service", "privicy policy", "Affilated Programe"],
   },
   {
+    id: 3,
     title: "Online shoping",
     data: ["About us", "Our service", "privicy policy", "Affilated Programe"],
   },
@@ -74,7 +77,7 @@ const FooterOptions = () => {
             justifyContent="center"
           >
             <Box>
-              <div>
+              <Box>
                 <Typography
                   variant="h6"
                   sx={{
@@ -91,7 +94,7 @@ const FooterOptions = () => {
                 >
                   {item.title}
                 </Typography>
-              </div>
+              </Box>
               <Stack
                 direction={`${i === item.data.length - 1 ? "row" : "column"}`}
                 sx={{
@@ -140,7 +143,7 @@ const FooterFollowButtonList = () => {
       justifyContent="center"
     >
       <Box>
-        <div>
+        <Box>
           <Typography
             variant="h6"
             sx={{
@@ -157,7 +160,7 @@ const FooterFollowButtonList = () => {
           >
             Follow us
           </Typography>
-        </div>
+        </Box>
         <Stack
           direction="row"
           sx={{
@@ -168,10 +171,10 @@ const FooterFollowButtonList = () => {
           }}
         >
           {[
-            <LinkedInIcon />,
-            <TwitterIcon />,
-            <InstagramIcon />,
-            <FacebookIcon />,
+            <LinkedInIcon key="lik1" />,
+            <TwitterIcon key="lik2" />,
+            <InstagramIcon key="lik3" />,
+            <FacebookIcon key="lik4" />,
           ].map((item, j) => {
             return (
               <Typography
